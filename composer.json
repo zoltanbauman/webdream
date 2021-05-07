@@ -22,6 +22,11 @@
             "BaumanZoltan\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests/Unit"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
