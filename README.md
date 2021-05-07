@@ -26,3 +26,8 @@ A `BusinessTest` tartalmazza a lényegi tesztelést, ami a kívánt feltételeke
 * ...felvesz több terméket, de nincs elég hely: `testHasNotEnoughStorageSpace`
 * ...kikér több terméket, de a kérést csak több raktár együtt tudja kiszolgálni: `testTakeOutProductionSuccess`
 * ...kikér több terméket, de nincs elég a raktáron: `testTakeOutProductionException`
+
+`php .\vendor\phpunit\phpunit\phpunit .\tests\Unit`
+
+Windows: `phpunit` 
+
