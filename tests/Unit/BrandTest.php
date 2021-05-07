@@ -18,8 +18,7 @@ class BrandTest extends TestCase
         $brand = new Brand();
         $brand
             ->setName('TestBrand')
-            ->setCategoryLevel(1)
-        ;
+            ->setCategoryLevel(1);
 
         $this->assertEquals('TestBrand', $brand->getName());
 

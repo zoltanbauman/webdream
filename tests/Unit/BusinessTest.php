@@ -30,7 +30,7 @@ class BusinessTest extends TestCase
     }
 
     /**
-     * @depends testAddStorages
+     * @depends      testAddStorages
      * @dataProvider productDataProvider
      */
     public function testHasEnoughStorageSpace($products, Business $business)
@@ -46,7 +46,7 @@ class BusinessTest extends TestCase
     }
 
     /**
-     * @depends testAddStorages
+     * @depends      testAddStorages
      * @dataProvider productDataProvider
      */
     public function testHasNotEnoughStorageSpace($products, Business $business)
@@ -59,7 +59,7 @@ class BusinessTest extends TestCase
     }
 
     /**
-     * @depends testAddStorages
+     * @depends      testAddStorages
      * @dataProvider productDataProvider
      */
     public function testTakeOutProductionSuccess($products, Business $business)
@@ -73,7 +73,7 @@ class BusinessTest extends TestCase
     }
 
     /**
-     * @depends testAddStorages
+     * @depends      testAddStorages
      * @dataProvider productDataProvider
      */
     public function testTakeOutProductionException($products, Business $business)
@@ -98,8 +98,8 @@ class BusinessTest extends TestCase
     {
         print "Aktuális raktár készlet: \n\r";
         $businessProductsResponse = $business->getProducts();
-        foreach($businessProductsResponse->getProducts() as $storageItem) {
-            print $storageItem->getProduct()->getSku().': '.$storageItem->getQuantity()."\n\r";
+        foreach ($businessProductsResponse->getProducts() as $storageItem) {
+            print $storageItem->getProduct()->getSku() . ': ' . $storageItem->getQuantity() . "\n\r";
         }
     }
 

@@ -61,7 +61,7 @@ class StorageItem implements StorageItemInterface, StorageItemResposneInterface
      */
     public function removeQuantity(float $quantity): StorageItem
     {
-        if ( $this->quantity < $quantity ) {
+        if ($this->quantity < $quantity) {
             throw new NotEnoughStorageQuantityException();
         }
         $this->quantity -= $quantity;

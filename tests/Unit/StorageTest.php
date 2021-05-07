@@ -17,8 +17,7 @@ class StorageTest extends TestCase
         $storage
             ->setName('Test storage')
             ->setAddress('1234 Budapest, Street u. 123.')
-            ->setCapacity(10)
-        ;
+            ->setCapacity(10);
 
         $this->assertEquals('Test storage', $storage->getName());
         $this->assertEquals('1234 Budapest, Street u. 123.', $storage->getAddress());
@@ -37,8 +36,7 @@ class StorageTest extends TestCase
         $product = new Product();
         $product
             ->setName('First product')
-            ->setSku('12345')
-        ;
+            ->setSku('12345');
 
         $storage->add($product, 4);
         $storage->add($product, 3);
@@ -73,8 +71,7 @@ class StorageTest extends TestCase
         $product2 = new Product();
         $product2
             ->setSku('abcd')
-            ->setName('Second product')
-        ;
+            ->setName('Second product');
 
         $storage->add($product2);
 
@@ -96,8 +93,7 @@ class StorageTest extends TestCase
         $product = new Product();
         $product
             ->setName('First product')
-            ->setSku('12345')
-        ;
+            ->setSku('12345');
 
         $storage->remove($product, 2);
 

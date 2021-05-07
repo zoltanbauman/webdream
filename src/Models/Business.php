@@ -8,7 +8,8 @@ use BaumanZoltan\Exceptions\NotEnoughStorageSpaceException;
 use BaumanZoltan\Responses\BusinessProductsResponse;
 use BaumanZoltan\Interfaces\{ProductInterface, StorageInterface};
 
-class Business extends BusinessAbstract {
+class Business extends BusinessAbstract
+{
     public function addStorage(StorageInterface ...$storage): Business
     {
         foreach ($storage as $storageObject) {
@@ -28,8 +29,8 @@ class Business extends BusinessAbstract {
     {
         $storageIterator = 0;
 
-        if ( $this->getFreeCapacity() >= ($product->getCapacityUsed() * $quantity) ) {
-            while($quantity > 0) {
+        if ($this->getFreeCapacity() >= ($product->getCapacityUsed() * $quantity)) {
+            while ($quantity > 0) {
                 $storage = $this->storages[$storageIterator++];
                 $quantity = $storage->add($product, $quantity);
             }
@@ -48,7 +49,7 @@ class Business extends BusinessAbstract {
      */
     public function takeOutProduct(ProductInterface $product, float $quantity): Business
     {
-        if ( $this->getProducts()->getQuantity($product->getSku()) >= $quantity ) {
+        if ($this->getProducts()->getQuantity($product->getSku()) >= $quantity) {
             $storageIterator = 0;
             while ($quantity > 0) {
                 $storage = $this->storages[$storageIterator++];

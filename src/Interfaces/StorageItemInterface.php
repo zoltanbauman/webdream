@@ -1,4 +1,5 @@
 <?php
+
 namespace BaumanZoltan\Interfaces;
 
 use BaumanZoltan\Exceptions\NotEnoughStorageQuantityException;

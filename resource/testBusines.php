@@ -40,14 +40,12 @@ try {
         ->putInProduct($products[3], 4)
         ->putInProduct($products[4], 3)
         ->putInProduct($products[5], 2)
-
         ->putInProduct($products[0], 1)
         ->putInProduct($products[1], 2)
         ->putInProduct($products[2], 3)
         ->putInProduct($products[3], 4)
         ->putInProduct($products[4], 3)
-        ->putInProduct($products[5], 2)
-    ;
+        ->putInProduct($products[5], 2);
 } catch (NotEnoughStorageSpaceException $exception) {
 //    print_r($exception);
 }

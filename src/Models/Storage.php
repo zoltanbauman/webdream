@@ -10,19 +10,20 @@ use BaumanZoltan\Interfaces\{ProductInterface, StorageItemInterface};
  * Class Storage
  * @package BaumanZoltan\Models
  *
- * @method StorageItem getProducts()
+ * @method StorageItem[] getProducts()
  */
 class Storage extends StorageAbstract
 {
 
-    public function getProductQuantity() {
+    public function getProductQuantity()
+    {
         $quantity = 0;
 
-        foreach ($this->getProducts() as $product) {
-            $quantity += $product->getQuantity();
+        foreach ($this->getProducts() as $storageItem) {
+            $quantity += $storageItem->getQuantity();
         }
 
-        return$quantity;
+        return $quantity;
     }
 
     /**
@@ -33,13 +34,13 @@ class Storage extends StorageAbstract
     public function add(ProductInterface $product, float $quantity = 1): float
     {
         $returnQuantity = 0;
-        if ( !$this->hasEnoughSpace($quantity * $product->getCapacityUsed()) ) {
+        if (!$this->hasEnoughSpace($quantity * $product->getCapacityUsed())) {
             $quantitySpace = floor($this->getFreeCapacity() / $product->getCapacityUsed());
             $returnQuantity = $quantity - $quantitySpace;
             $quantity = $quantitySpace;
         }
 
-        if ( !( $storageItem = $this->getStorageItem($product) ) ) {
+        if (!($storageItem = $this->getStorageItem($product))) {
             $storageItem = new StorageItem($product);
 
             $this->products[$product->getSku()] = $storageItem;
@@ -59,7 +60,7 @@ class Storage extends StorageAbstract
     public function remove(ProductInterface $product, float $quantity): float
     {
         $returnQuantity = 0;
-        if ( $storageItem = $this->getStorageItem($product) ) {
+        if ($storageItem = $this->getStorageItem($product)) {
             $returnQuantity = max(0, $quantity - $storageItem->getQuantity());
             $quantity -= $returnQuantity;
             $storageItem->removeQuantity($quantity);

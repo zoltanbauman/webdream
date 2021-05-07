@@ -1,4 +1,5 @@
 <?php
+
 namespace BaumanZoltan\Interfaces;
 
 interface BusinessProductsResponseInterface

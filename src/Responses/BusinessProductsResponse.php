@@ -21,13 +21,14 @@ class BusinessProductsResponse implements BusinessProductsResponseInterface
         $this->processProducts();
     }
 
-    private function processProducts() {
+    private function processProducts()
+    {
         foreach ($this->business->getStorages() as $storage) {
             foreach ($storage->getProducts() as $storageItem) {
                 $product = $storageItem->getProduct();
                 $this->products[$product->getSku()] = $product;
 
-                if ( !isset($this->quantities[$product->getSku()]) ) $this->quantities[$product->getSku()] = 0;
+                if (!isset($this->quantities[$product->getSku()])) $this->quantities[$product->getSku()] = 0;
                 $this->quantities[$product->getSku()] += $storageItem->getQuantity();
             }
         }
@@ -60,7 +61,7 @@ class BusinessProductsResponse implements BusinessProductsResponseInterface
      */
     public function getProduct(string $sku): ?StorageItemResposneInterface
     {
-        if ( !isset($this->products[$sku]) ) return null;
+        if (!isset($this->products[$sku])) return null;
 
         return new BusinessItem($this->products[$sku], $this->quantities[$sku]);
     }
