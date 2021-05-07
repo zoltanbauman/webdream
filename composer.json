@@ -1,0 +1,27 @@
+{
+    "name": "zoltanbauman/webdream",
+    "type": "project",
+    "description": "Webdream Otthoni teszt feladat",
+    "keywords": [
+        "Webdream"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "BaumanZoltan\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
