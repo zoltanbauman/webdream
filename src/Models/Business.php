@@ -9,13 +9,11 @@ use BaumanZoltan\Responses\BusinessProductsResponse;
 use BaumanZoltan\Interfaces\{ProductInterface, StorageInterface};
 
 class Business extends BusinessAbstract {
-    /**
-     * @param StorageInterface $storage
-     * @return Business
-     */
-    public function addStorage(StorageInterface $storage): Business
+    public function addStorage(StorageInterface ...$storage): Business
     {
-        $this->storages[] = $storage;
+        foreach ($storage as $storageObject) {
+            $this->storages[] = $storageObject;
+        }
 
         return $this;
     }

@@ -34,10 +34,10 @@ abstract class BusinessAbstract extends BaseModel implements BusinessInterface
     }
 
     /**
-     * @param StorageInterface $storage
+     * @param StorageInterface ...$storage
      * @return BusinessAbstract
      */
-    abstract public function addStorage(StorageInterface $storage): BusinessAbstract;
+    abstract public function addStorage(StorageInterface ...$storage): BusinessAbstract;
 
     /**
      * @param ProductInterface $product

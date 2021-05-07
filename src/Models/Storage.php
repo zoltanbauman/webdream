@@ -6,6 +6,12 @@ use BaumanZoltan\Abstracts\StorageAbstract;
 use BaumanZoltan\Exceptions\NotEnoughStorageQuantityException;
 use BaumanZoltan\Interfaces\{ProductInterface, StorageItemInterface};
 
+/**
+ * Class Storage
+ * @package BaumanZoltan\Models
+ *
+ * @method StorageItem getProducts()
+ */
 class Storage extends StorageAbstract
 {
 

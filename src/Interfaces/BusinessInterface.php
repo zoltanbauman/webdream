@@ -13,10 +13,10 @@ interface BusinessInterface
     public function getStorages(): array;
 
     /**
-     * @param StorageInterface $storage
+     * @param StorageInterface ...$storage
      * @return BusinessInterface
      */
-    public function addStorage(StorageInterface $storage): BusinessInterface;
+    public function addStorage(StorageInterface ...$storage): BusinessInterface;
 
     /**
      * @param ProductInterface $product

@@ -71,7 +71,7 @@ interface StorageInterface
     public function getFreeCapacity(): float;
 
     /**
-     * @return array|ProductInterface[]
+     * @return array|StorageItemInterface[]|StorageItemResposneInterface[]
      */
     public function getProducts(): array;
 }
