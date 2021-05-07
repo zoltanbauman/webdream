@@ -18,7 +18,8 @@
 
 ### Termékek
 
-Három termékosztályt határoztam meg `MobilePhoneProduct`, `ProjectProduct` és a `TvProduct`.
+Három termékosztályt határoztam meg `MobilePhoneProduct`, `ProjectProduct` és a `TvProduct`. 
+Rendelkeznek közös és egyedi attributumokkal is. 
 
 ### Tesztelés
 
