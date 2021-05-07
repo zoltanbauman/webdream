@@ -14,7 +14,7 @@ Három termékosztályt határoztam meg `MobilePhoneProduct`, `ProjectProduct` �
 * Kiiratja a raktárak tartalmát: Erre egy kezdetleges index.php -t készítettem, ami egyszerűen betölti az adatokat a
   `resource/testBusines.php` fájlból, és egy tánlázatba kiiratja. Azért döntöttem emelett az egyszerű stuktúra melett,
   mert a megjelenítés az egy teljesen különálló alkalmazást igényel. Ettől függetlenül a unittestben is szerepel a
-  megjelenítés. `displayBusinessSore`
+  megjelenítés. `testBusinessProductsList`
 
 ### Tesztelés
 
@@ -26,4 +26,3 @@ A `BusinessTest` tartalmazza a lényegi tesztelést, ami a kívánt feltételeke
 * ...felvesz több terméket, de nincs elég hely: `testHasNotEnoughStorageSpace`
 * ...kikér több terméket, de a kérést csak több raktár együtt tudja kiszolgálni: `testTakeOutProductionSuccess`
 * ...kikér több terméket, de nincs elég a raktáron: `testTakeOutProductionException`
-* 
