@@ -1,8 +1,8 @@
 # Webdream Otthoni feladat
 
-## Termékek
-
-Három termékosztályt határoztam meg `MobilePhoneProduct`, `ProjectProduct` és a `TvProduct`.
+### Requirements
+* `PHP ^7.4`
+* `composer`
 
 ### Feladat
 
@@ -15,6 +15,10 @@ Három termékosztályt határoztam meg `MobilePhoneProduct`, `ProjectProduct` �
   `resource/testBusines.php` fájlból, és egy tánlázatba kiiratja. Azért döntöttem emelett az egyszerű stuktúra melett,
   mert a megjelenítés az egy teljesen különálló alkalmazást igényel. Ettől függetlenül a unittestben is szerepel a
   megjelenítés. `testBusinessProductsList`
+
+### Termékek
+
+Három termékosztályt határoztam meg `MobilePhoneProduct`, `ProjectProduct` és a `TvProduct`.
 
 ### Tesztelés
 
@@ -30,4 +34,11 @@ A `BusinessTest` tartalmazza a lényegi tesztelést, ami a kívánt feltételeke
 `php .\vendor\phpunit\phpunit\phpunit .\tests\Unit`
 
 Windows: `phpunit` 
+
+### Megjegyzés/Észrevétel
+Fejlesztés során a kapacitást nem darabszámban kezeltem, hanem mint egy térfogati egység.
+Ezért a termékeknél megadható, hogy egy termék mennyi kapacitási egységet igényel (`$capacityUsed`). Ez alapértelmezetten 1. 
+Ennek megfelelően ha ezt az értéket változtatjuk, akkor több/kevesebb helyet fog foglalni a raktárban.
+
+
 
