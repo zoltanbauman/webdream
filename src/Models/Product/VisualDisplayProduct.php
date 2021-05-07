@@ -2,7 +2,7 @@
 
 namespace BaumanZoltan\Models\Product;
 
-class VisualDisplayProduct extends ElectricProduct
+abstract class VisualDisplayProduct extends ElectricProduct
 {
     protected string $aspectRatio;
     protected string $resolution;

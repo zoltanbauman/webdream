@@ -4,7 +4,7 @@ namespace BaumanZoltan\Models\Product;
 
 use BaumanZoltan\Abstracts\ProductAbstract;
 
-class ElectricProduct extends ProductAbstract
+abstract class ElectricProduct extends ProductAbstract
 {
     protected string $type;
 
